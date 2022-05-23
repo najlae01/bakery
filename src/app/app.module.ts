@@ -1,16 +1,57 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { HomeComponent } from './pages/home/home.component';
+import { MenuComponent } from './pages/menu/menu.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { OrderPageComponent } from './pages/order-page/order-page.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ListCategoryComponent } from './pages/list-category/list-category.component';
+import { AddCategoryComponent } from './pages/add-category/add-category.component';
+import { UpdateCategoryComponent } from './pages/update-category/update-category.component';
+import { ListProductComponent } from './pages/list-product/list-product.component';
+import { AddProductComponent } from './pages/add-product/add-product.component';
+import { UpdateProductComponent } from './pages/update-product/update-product.component';
+import { ListOrderComponent } from './pages/list-order/list-order.component';
+import { ListUserComponent } from './pages/list-user/list-user.component';
+import { UpdateProfileComponent } from './pages/update-profile/update-profile.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    MenuComponent,
+    ProductPageComponent,
+    OrderPageComponent,
+    ContactComponent,
+    AboutComponent,
+    ProfileComponent,
+    ListCategoryComponent,
+    AddCategoryComponent,
+    UpdateCategoryComponent,
+    ListProductComponent,
+    AddProductComponent,
+    UpdateProductComponent,
+    ListOrderComponent,
+    ListUserComponent,
+    UpdateProfileComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
