@@ -21,7 +21,7 @@ import { UpdateProfileComponent } from './pages/update-profile/update-profile.co
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'menu/:id', component: MenuComponent},
+  { path: 'menu', component: MenuComponent},
   { path: 'product/:id', component: ProductPageComponent},
   { path: 'about', component: AboutComponent},
   { path: 'contact', component: ContactComponent},

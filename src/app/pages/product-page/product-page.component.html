@@ -1,1 +1,20 @@
-<p>product-page works!</p>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-lg-6" *ngIf="menuData">
+            <a [routerLink]="['menu']" class="btn btn-sm btn-dark mb-3">Back</a>
+            <img src="{{menuData[0].productImg}}" width="100%"/>
+            <h1 class="mt-3">{{menuData[0].productName}}</h1>
+            <p >{{menuData[0].productDetails}}</p>
+            <p >{{menuData[0].productPrice | currency: '$'}}</p>
+        </div>
+        <div class="col-lg-6 col-lg-12">
+            <h1>Fill Details</h1>
+            <form>
+                <input type="text" class="form-control" placeholder="Enter Your Full Name"/>
+                <input type="text" class="form-control"  placeholder="Enter Your Phone Number"/>
+                <textarea class="form-control"  placeholder="Enter Your Address"></textarea>
+                <button class="btn btn-md btn-dark mt-3">Place Your Order</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -58,5 +58,36 @@ export class DataService {
     return this.httpClient.get('http://127.0.01/api/user/'+id);
   }
 
+  productData = [
+    {
+      id:1,
+      productName: "Panner Grilled Sandwich",
+      productDetails: "Pan-fried masala paneer",
+      productPrice: 20,
+      productImg: "../../../assets/img/paneer-grilled-sandwich.jpg"
+    },
+    {
+      id:2,
+      productName: "Veggie Supreme",
+      productDetails: "Healthy and Yummy Beans Creamy Veggie Salad.",
+      productPrice: 30,
+      productImg: "../../../assets/img/veggie-supreme.jpg"
+    },
+    {
+      id:3,
+      productName: "Avocado Brunch",
+      productDetails: "Vegetarian Avocado Brunch with Avocado.",
+      productPrice: 25,
+      productImg: "../../../assets/img/avocado.jpg"
+    },
+    {
+      id:4,
+      productName: "Oreo Cupcakes",
+      productDetails: "Oreo Cupcakes with cookies.",
+      productPrice: 10,
+      productImg: "../../../assets/img/oreo-cupcakes.jpg"
+    },
+  ];
+
 
 }

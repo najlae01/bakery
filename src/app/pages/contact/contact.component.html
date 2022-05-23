@@ -1,1 +1,71 @@
-<p>contact works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['']">CloudKit</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['']" routerLinkActive="active-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['about']" routerLinkActive="active-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" [routerLink]="['contact']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container mb-5 mt-5">
+    <h1 class="text-center mb-3">Contact Us</h1> 
+    <form>
+        <div class="row">
+            <div class="col-lg-6 mt-2 mb-2">
+                <input type="text" class="form-control" placeholder="Enter Your First Name">
+            </div>
+            <div class="col-lg-6 mt-2 mb-2">
+                <input type="text" class="form-control" placeholder="Enter Your Last Name">
+            </div>
+            <div class="col-lg-6 mt-2 mb-2">
+                <input type="text" class="form-control" placeholder="Enter Your Email Address">
+            </div>
+            <div class="col-lg-6 mt-2 mb-2">
+                <input type="text" class="form-control" placeholder="Enter Your Phone Number">
+            </div>
+            <div class="col-lg-6 mt-2 mb-2">
+                <button class="btn btn-md btn-dark">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="container-fluid footer mt-5">
+    <div class="row">
+        <div class="col-lg-6 mt-3 mb-3">
+            <!--name-->
+            <h1>CloudKit</h1>
+            <p> GOOD FOOD, GOOD EAT</p>
+        </div>
+        <!--nav-->
+        <div class="col-lg-4 mt-3 mb-3">
+            <a [routerLink]="['']">Home</a>
+            <a [routerLink]="['menu']">Menu</a>
+            <a [routerLink]="['about']">About</a>
+            <a [routerLink]="['contact']">Contact</a>
+        </div>
+        <!--socialmedia-->
+        <div class="col-lg-2 mt-3 mb-3">
+            <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+        </div>
+    </div>
+</div>

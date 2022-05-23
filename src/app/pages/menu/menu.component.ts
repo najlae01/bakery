@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataService } from 'src/app/services/data.service';
 @Component({
-  selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private dataservice: DataService) { }
+  productData:any;
   ngOnInit(): void {
+    this.productData = this.dataservice.productData;
   }
 
 }
