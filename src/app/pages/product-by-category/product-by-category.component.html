@@ -1,4 +1,3 @@
-<td><button class="btn btn-warning btn-sm mx-2" [routerLink]="['/addproduct']">Add</button></td>
 <table class="table">
     <thead>
         <tr>
@@ -17,8 +16,8 @@
             <td >{{product.productName}}</td>
             <td >{{product.productDetails}}</td>
             <td >{{product.productPrice | currency: '$'}}</td>
-            <td><button class="btn btn-danger btn-sm" (click)="deleteData(product.id)">Delete</button></td>
-            <td><button class="btn btn-warning btn-sm mx-2" routerLink="/updateproduct/{{product.id}}">Update</button></td>
+            <td><button class="btn btn-danger btn-sm" (click)="deleteData(product.id)">Supprimer</button></td>
+            <td><button class="btn btn-warning btn-sm mx-2" routerLink="edit/{{product.id}}">Mettre à jour</button></td>
         </tr>
     </tbody>
 </table>

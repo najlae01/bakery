@@ -26,6 +26,7 @@ import { ListUserComponent } from './pages/list-user/list-user.component';
 import { UpdateProfileComponent } from './pages/update-profile/update-profile.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ProductByCategoryComponent } from './pages/product-by-category/product-by-category.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -68,7 +69,8 @@ const routes: Routes = [
     ListUserComponent,
     UpdateProfileComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductByCategoryComponent
   ],
   imports: [
     BrowserModule,

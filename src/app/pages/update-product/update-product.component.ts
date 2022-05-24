@@ -12,6 +12,7 @@ export class UpdateProductComponent implements OnInit {
 
   id: any;
   data: any;
+  categories: any;
   product = new Product();
     constructor(private route: ActivatedRoute, private dataService: DataService) { }
   
@@ -19,6 +20,7 @@ export class UpdateProductComponent implements OnInit {
       console.log(this.route.snapshot.params['id']);
       this.id = this.route.snapshot.params['id'];
       this.getData();
+      this.getCategoryData();
     }
     getData(){
       this.dataService.getProduct(this.id).subscribe(res =>{
@@ -33,4 +35,13 @@ export class UpdateProductComponent implements OnInit {
         this.getData;
       })
     }
+
+    
+  getCategoryData(){
+    console.log("Liste des catégories")
+    this.dataService.listCategory().subscribe(res =>{
+      console.log(res);
+      this.categories = res;
+    })
+  }
 }

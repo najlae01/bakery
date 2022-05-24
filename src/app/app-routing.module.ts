@@ -12,6 +12,7 @@ import { ListUserComponent } from './pages/list-user/list-user.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { OrderPageComponent } from './pages/order-page/order-page.component';
+import { ProductByCategoryComponent } from './pages/product-by-category/product-by-category.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'categories', component: ListCategoryComponent},
   { path: 'addcategory', component: AddCategoryComponent},
   { path: 'updatecategory/:id', component: UpdateCategoryComponent},
+  { path: 'products/:id', component: ProductByCategoryComponent},
   { path: 'products', component: ListProductComponent},
   { path: 'addproduct', component: AddProductComponent},
   { path: 'updateproduct/:id', component: UpdateProductComponent},

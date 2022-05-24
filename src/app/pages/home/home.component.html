@@ -1,4 +1,4 @@
-<div *ngIf="courses.length == 0; else dashboard">
+<div *ngIf="courses.length > 0; else dashboard">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" [routerLink]="['']">CloudKit</a>
@@ -111,11 +111,12 @@
         <tbody>
             <tr *ngFor="let category of categories">
                 <th scope="row">{{category.id}}</th>
-                <td><img src="{{imageDirectorypath}}{{category.categoryImg}}" height="100px"/></td>
+                <td><img src="http://127.0.0.1:8000/storage/categories/{{category.categoryImg}}" height="100px"/></td>
                 <td >{{category.categoryName}}</td>
                 <td >{{category.categoryDetails}}</td>
                 <td><button class="btn btn-danger btn-sm" (click)="deleteData(category.id)">Delete</button></td>
                 <td><button class="btn btn-warning btn-sm mx-2" routerLink="updatecategory/{{category.id}}">Update</button></td>
+                <td><button class="btn btn-primary btn-sm mx-2" routerLink="products/{{category.id}}">View Products</button></td>
             </tr>
         </tbody>
     </table>

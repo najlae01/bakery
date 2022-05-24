@@ -11,13 +11,13 @@
                 <a class="nav-link" [routerLink]="['']" routerLinkActive="active-link" >Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active-link">Menu</a>
+                <a class="nav-link" [routerLink]="['/menu']" routerLinkActive="active-link">Menu</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" [routerLink]="['about']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " [routerLink]="['contact']" routerLinkActive="active-link">Contact</a>
+                <a class="nav-link " [routerLink]="['/contact']" routerLinkActive="active-link">Contact</a>
               </li>
             </ul>
           </div>
@@ -119,9 +119,9 @@
             <!--nav-->
             <div class="col-lg-4 mt-3 mb-3">
                 <a [routerLink]="['']">Home</a>
-                <a [routerLink]="['menu']">Menu</a>
+                <a [routerLink]="['/menu']">Menu</a>
                 <a [routerLink]="['about']">About</a>
-                <a [routerLink]="['contact']">Contact</a>
+                <a [routerLink]="['/contact']">Contact</a>
             </div>
             <!--socialmedia-->
             <div class="col-lg-2 mt-3 mb-3">

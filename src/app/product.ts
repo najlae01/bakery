@@ -3,4 +3,5 @@ export class Product {
     'productDetails': any;
     'productPrice': any;
     'productImg': any;
+    'category_id': any;
 }
