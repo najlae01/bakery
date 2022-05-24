@@ -1,1 +1,24 @@
-<p>list-product works!</p>
+<td><button class="btn btn-warning btn-sm mx-2" routerLink="addproduct">Add</button></td>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Details</th>
+            <th scope="col">Price</th>
+            <th>Action</th>
+        </tr>    
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <th scope="row">{{product.id}}</th>
+            <td><img src="{{imageDirectorypath}}{{product.productImg}}" height="100px"/></td>
+            <td >{{product.productName}}</td>
+            <td >{{product.productDetails}}</td>
+            <td >{{product.productPrice | currency: '$'}}</td>
+            <td><button class="btn btn-danger btn-sm" (click)="deleteData(product.id)">Supprimer</button></td>
+            <td><button class="btn btn-warning btn-sm mx-2" routerLink="edit/{{product.id}}">Mettre à jour</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,96 +1,122 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" [routerLink]="['']">CloudKit</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" [routerLink]="['']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active-link">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['about']" routerLinkActive="active-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " [routerLink]="['contact']" routerLinkActive="active-link">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-<div class="banner">
-    <div class="content">
-        <h1 class="mb-5">Fresh Cooked Food<br/>At Your Door.</h1>
-        <a [routerLink]="['menu']">ORDER NOW <i class="bi bi-arrow-right"></i></a>
-    </div>
-</div>
-<div class="container mt-5 mb-5">
-    <h1 class="text-center">How To Get <span class="highlight">Food</span></h1>
-    <div class="row mt-5">
-        <!--one-->
-        <div class="col-lg-4 mt-2">
-            <div class="stepBox">
-                <h1>1</h1>
-                <p>Choose Your Product</p>
-            </div>
+<div *ngIf="courses.length > 0; else dashboard">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" [routerLink]="['']">CloudKit</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" [routerLink]="['']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['menu']" routerLinkActive="active-link">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['about']" routerLinkActive="active-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " [routerLink]="['contact']" routerLinkActive="active-link">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!--two-->
-        <div class="col-lg-4 mt-2">
-            <div class="stepBox">
-                <h1>2</h1>
-                <p>Provide Us With Your Address</p>
-            </div>
-        </div>
-        <!--three-->
-        <div class="col-lg-4 mt-2">
-            <div class="stepBox">
-                <h1>3</h1>
-                <p>Your Order Will Be Delivered In A Minute</p>
-            </div>
+      </nav>
+    
+    <div class="banner">
+        <div class="content">
+            <h1 class="mb-5">Fresh Cooked Food<br/>At Your Door.</h1>
+            <a [routerLink]="['menu']">ORDER NOW <i class="bi bi-arrow-right"></i></a>
         </div>
     </div>
-</div>
-
-<!--productbox-->
-<div class="container mt-4 mb-4">
-    <h1 class="text-center">Customers <span class="highlight">FAVORITE Products</span></h1>
-    <div class="row">
-        <div class="col-lg-3 mt-3" *ngFor="let product of productData">
-            <div class="productbox">
-                <img src="{{product.productImg}}"/>
-                <h1 class="text-center">{{product.productName}}</h1>
-                <p class="text-center">{{product.productPrice | currency: '$'}}</p>
+    <div class="container mt-5 mb-5">
+        <h1 class="text-center">How To Get <span class="highlight">Food</span></h1>
+        <div class="row mt-5">
+            <!--one-->
+            <div class="col-lg-4 mt-2">
+                <div class="stepBox">
+                    <h1>1</h1>
+                    <p>Choose Your Product</p>
+                </div>
+            </div>
+            <!--two-->
+            <div class="col-lg-4 mt-2">
+                <div class="stepBox">
+                    <h1>2</h1>
+                    <p>Provide Us With Your Address</p>
+                </div>
+            </div>
+            <!--three-->
+            <div class="col-lg-4 mt-2">
+                <div class="stepBox">
+                    <h1>3</h1>
+                    <p>Your Order Will Be Delivered In A Minute</p>
+                </div>
             </div>
         </div>
     </div>
-    <a [routerLink]="['menu']" class="viewmorebtn">see more <i class="bi bi-arrow-right"></i></a>
-</div>
-
-
-<div class="container-fluid footer mt-5">
-    <div class="row">
-        <div class="col-lg-6 mt-3 mb-3">
-            <!--name-->
-            <h1>CloudKit</h1>
-            <p> GOOD FOOD, GOOD EAT</p>
+    
+    <!--productbox-->
+    <div class="container mt-4 mb-4">
+        <h1 class="text-center">Customers <span class="highlight">FAVORITE Products</span></h1>
+        <div class="row">
+            <div class="col-lg-3 mt-3" *ngFor="let product of productData">
+                <div class="productbox">
+                    <img src="{{product.productImg}}"/>
+                    <h1 class="text-center">{{product.productName}}</h1>
+                    <p class="text-center">{{product.productPrice | currency: '$'}}</p>
+                </div>
+            </div>
         </div>
-        <!--nav-->
-        <div class="col-lg-4 mt-3 mb-3">
-            <a [routerLink]="['']">Home</a>
-            <a [routerLink]="['menu']">Menu</a>
-            <a [routerLink]="['about']">About</a>
-            <a [routerLink]="['contact']">Contact</a>
-        </div>
-        <!--socialmedia-->
-        <div class="col-lg-2 mt-3 mb-3">
-            <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a [routerLink]="['menu']" class="viewmorebtn">see more <i class="bi bi-arrow-right"></i></a>
+    </div>
+    
+    
+    <div class="container-fluid footer mt-5">
+        <div class="row">
+            <div class="col-lg-6 mt-3 mb-3">
+                <!--name-->
+                <h1>CloudKit</h1>
+                <p> GOOD FOOD, GOOD EAT</p>
+            </div>
+            <!--nav-->
+            <div class="col-lg-4 mt-3 mb-3">
+                <a [routerLink]="['']">Home</a>
+                <a [routerLink]="['menu']">Menu</a>
+                <a [routerLink]="['about']">About</a>
+                <a [routerLink]="['contact']">Contact</a>
+            </div>
+            <!--socialmedia-->
+            <div class="col-lg-2 mt-3 mb-3">
+                <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+            </div>
         </div>
     </div>
 </div>
+<ng-template #dashboard>
+    <td><button class="btn btn-warning btn-sm mx-2" routerLink="addcategory">Add</button></td>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Details</th>
+                <th>Action</th>
+            </tr>    
+        </thead>
+        <tbody>
+            <tr *ngFor="let category of categories">
+                <th scope="row">{{category.id}}</th>
+                <td><img src="{{imageDirectorypath}}{{category.categoryImg}}" height="100px"/></td>
+                <td >{{category.categoryName}}</td>
+                <td >{{category.categoryDetails}}</td>
+                <td><button class="btn btn-danger btn-sm" (click)="deleteData(category.id)">Delete</button></td>
+                <td><button class="btn btn-warning btn-sm mx-2" routerLink="updatecategory/{{category.id}}">Update</button></td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>

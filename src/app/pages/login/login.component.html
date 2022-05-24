@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   
 <!DOCTYPE html>
 <html lang="en"> 
@@ -23,3 +24,34 @@
         </div> 
       </div></form> 
   </body></html>
+=======
+<div class="container">
+    <form (ngSubmit)="insertData()" class="form">
+        <div class="form__text">
+            Login
+        </div>
+
+        <div class="form__group">
+            <label for="email" class="form__label">Email address</label>
+            <input [(ngModel)]="email" type="text" class="form__input" placeholder="Email address" id="email" />
+        </div>
+        <div class="form__group">
+            <label for="password" class="form__label">Password</label>
+            <input [(ngModel)]="password" type="password" class="form__input" placeholder="Password" id="password" />
+        </div>
+    <br/>
+        <div class="form__button">
+            <input type="submit" [routerLink]="['']" class="btn" value="LOGIN">
+            <button class="btn" [routerLink]="['register']">Sign Up Here</button>
+        </div>
+    </form>
+        <div class="from__bottom">
+            <div class="sign">Or Sign up using</div>
+            <div class="social">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-google"></i>
+            </div>
+        </div>
+</div>
+>>>>>>> 9565bce (gn)

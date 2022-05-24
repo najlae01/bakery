@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Category } from '../category';
 import { Product } from '../product';
+import { User } from '../user';
 
 @Injectable({
   providedIn: 'root'
@@ -11,51 +12,67 @@ export class DataService {
   constructor(private httpClient: HttpClient) { }
 
   listProduct(){
-    return this.httpClient.get('http://127.0.01/api/products');
+    return this.httpClient.get('http://127.0.0.1:8000/api/products');
   }
 
   getProduct(id: any){
-    return this.httpClient.get('http://127.0.01/api/product/'+id);
+    return this.httpClient.get('http://127.0.0.1:8000/api/product/'+id);
   }
 
   addProduct(product: Product){
-    return this.httpClient.post('http://127.0.01/api/addProduct', product);
+    return this.httpClient.post('http://127.0.0.1:8000/api/addProduct', product);
   }
 
   updateProduct(id: any, product: Product){
-    return this.httpClient.put('http://127.0.01/api/updateProduct/'+id, product);
+    return this.httpClient.put('http://127.0.0.1:8000/api/updateProduct/'+id, product);
   }
 
   deleteProduct(id: any){
-    return this.httpClient.get('http://127.0.01/api/deleteProduct/'+id);
+    return this.httpClient.get('http://127.0.0.1:8000/api/deleteProduct/'+id);
   }
 
   listCategory(){
-    return this.httpClient.get('http://127.0.01/api/categories');
+    return this.httpClient.get('http://127.0.0.1:8000/api/categories');
   }
 
   getCategory(id: any){
-    return this.httpClient.get('http://127.0.01/api/category/'+id);
+    return this.httpClient.get('http://127.0.0.1:8000/api/category/'+id);
   }
 
   addCategory(category: Category){
-    return this.httpClient.post('http://127.0.01/api/addCategory', category);
+    return this.httpClient.post('http://127.0.0.1:8000/api/addCategory', category);
   }
 
   updateCategory(id: any, category: Category){
-    return this.httpClient.put('http://127.0.01/api/updateCategory/'+id, category);
+    return this.httpClient.put('http://127.0.0.1:8000/api/updateCategory/'+id, category);
   }
 
   deleteCategory(id: any){
-    return this.httpClient.get('http://127.0.01/api/deleteCategory/'+id);
+    return this.httpClient.get('http://127.0.0.1:8000/api/deleteCategory/'+id);
   }
 
   listUser(){
-    return this.httpClient.get('http://127.0.01/api/users');
+    return this.httpClient.get('http://127.0.0.1:8000/api/users');
   }
 
   getUser(id: any){
-    return this.httpClient.get('http://127.0.01/api/user/'+id);
+    return this.httpClient.get('http://127.0.0.1:8000/api/user/'+id);
+  }
+
+  register(user: User){
+    return this.httpClient.post('http://127.0.0.1:8000/api/register', user);
+  }
+
+  login(email: any, password:any){
+    return this.httpClient.post('http://127.0.0.1:8000/api/login', email, password);
+  }
+
+  user(){
+    return this.httpClient.get('http://127.0.0.1:8000/api/user');
+  }
+
+  logout(){
+    return this.httpClient.get('http://127.0.0.1:8000/api/logout');
   }
 
   productData = [

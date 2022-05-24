@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+import { RouterModule, Routes } from '@angular/router';
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -24,6 +26,27 @@ import { ListUserComponent } from './pages/list-user/list-user.component';
 import { UpdateProfileComponent } from './pages/update-profile/update-profile.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent},
+  { path: 'menu', component: MenuComponent},
+  { path: 'product/:id', component: ProductPageComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'contact', component: ContactComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent},
+  { path: 'order/:id', component: OrderPageComponent},
+  { path: 'profile/:id', component: ProfileComponent},
+  { path: 'updateprofile/:id', component: UpdateProfileComponent},
+  { path: 'categories', component: ListCategoryComponent},
+  { path: 'addcategory', component: AddCategoryComponent},
+  { path: 'updatecategory/:id', component: UpdateCategoryComponent},
+  { path: 'products', component: ListProductComponent},
+  { path: 'addproduct', component: AddProductComponent},
+  { path: 'updateproduct/:id', component: UpdateProductComponent},
+  { path: 'orders', component: ListOrderComponent},
+  { path: 'users', component: ListUserComponent},
+];
 
 @NgModule({
   declarations: [
@@ -51,7 +74,8 @@ import { RegisterComponent } from './pages/register/register.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,14 @@
-<p>update-product works!</p>
+<form (ngSubmit)="updateProduct()" >
+    <div class="form-group">
+        <label for="productName">Name</label>
+        <input type="text" name="productName" class="text form-control" [(ngModel)]="product.productName">
+        <label for="productDetails">Details</label>
+        <input type="text" name="productDetails" class="text form-control" [(ngModel)]="product.productDetails">
+        <label for="productPrice">Price</label>
+        <input type="number" name="productPrice" class="text form-control" [(ngModel)]="product.productPrice">
+        <label for="productImg">Image</label>
+        <input type="file" name="productImg" class="text form-control" [(ngModel)]="product.productImg">
+    </div>
+    <button class="btn btn-dark btn -sm mt-4" >Submit</button>
+    <button class="btn btn-dark" [routerLink]="['products']">Back</button>
+</form>
