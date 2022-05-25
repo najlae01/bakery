@@ -23,17 +23,23 @@ export class LoginComponent implements OnInit {
     })
   }
 
+
   login(){
     this.user.email = this.form.get('email')?.value;
     this.user.password = this.form.get('password')?.value;
     this.dataService.login(this.user).subscribe(res=>{
       this.dt = res;
+      console.log(res);
       if(this.dt.status_code == 200){
         this.toast.success({detail:"Success Message", summary:this.dt.message, duration: 4000});
         this.form.reset();
         this.router.navigate(['']);
-      }else
+        return true;
+      }else{
         this.toast.error({detail:"Error Message", summary:"Login Failed, Try Again !", duration: 4000});
+        return false;
+      }
+        
     }
     )
   }

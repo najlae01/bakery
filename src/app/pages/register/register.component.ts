@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   form!: FormGroup;
   user = new User();
   dt: any;
+  userRole = new User();
   constructor(private router: Router, private formBuilder: FormBuilder, private dataService: DataService, private toast: NgToastService) { }
 
   ngOnInit(): void {
@@ -31,10 +32,16 @@ export class RegisterComponent implements OnInit {
     this.user.password = this.form.get('password')?.value;
     this.dataService.register(this.user).subscribe(res=>{
       this.dt = res;
+      console.log(res);
       if(this.dt.status_code == 200){
         this.toast.success({detail:"Success Message", summary:this.dt.message, duration: 4000});
         this.form.reset();
         this.router.navigate(['']);
+        /*this.userRole = this.dt;
+        if(this.userRole.is_Admin == 1)
+          this.router.navigate(['dashboard']);
+        else
+          this.router.navigate(['']); */
       }else
         this.toast.error({detail:"Error Message", summary:this.dt.message, duration: 4000});
     }

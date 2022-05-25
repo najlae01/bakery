@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AddCategoryComponent } from './pages/add-category/add-category.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'updateproduct/:id', component: UpdateProductComponent},
   { path: 'orders', component: ListOrderComponent},
   { path: 'users', component: ListUserComponent},
+  { path: 'dashboard', component: DashboardComponent},
 ];
 
 @NgModule({

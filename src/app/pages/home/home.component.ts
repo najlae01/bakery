@@ -9,12 +9,19 @@ import { User } from 'src/app/user';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public isAuth: boolean = false;
 
-  constructor(private toastr: ToastrService, private data: DataService) { }
-  id: any;
-  role: any;
-  //courses: any;
-  redir: any;
+  constructor(private toastr: ToastrService, private data: DataService) { 
+    setTimeout(
+      () => {
+        this.isAuth = true;
+      }
+    )
+  }
+  //id: any;
+  //role: any;
+  courses: any;
+  //redir: any;
   dt: any;
   imageDirectorypath: any = 'http://127.0.0.1:8000/storage/categories/'
   imageDirectorypathProducts: any = 'http://127.0.0.1:8000/storage/products/'
@@ -22,8 +29,8 @@ export class HomeComponent implements OnInit {
   products: any;
 
   ngOnInit(): void {
-    //this.courses = [];
-    this.redir = this.redirect();
+    this.courses = [];
+    //this.redir = this.redirect();
     //this.userId = this.data.getUser()
     this.getCategoryData();
     this.getProductData();
@@ -64,16 +71,5 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  redirect(){
-    this.data.getUser().subscribe(res =>{
-      console.log(res);
-      this.id = res;
-      if (this.id == 1){
-        return false;
-      }else{
-        return true;
-      }
-    })
-  }
 
 }
