@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="subheading"><a class="navbar-brand" [routerLink]="['']">Beleniss</a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['']" routerLinkActive="active-link"
+                        [routerLinkActiveOptions]="{exact:true}">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/menu']" routerLinkActive="active-link">MENU</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/chefs']" routerLinkActive="active-link">CHEFS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/gallery']" routerLinkActive="active-link">GALLERY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/testimonials']" routerLinkActive="active-link">TESTIMONIALS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/blog']" routerLinkActive="active-link">BLOG</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active-link">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " [routerLink]="['/contact']" routerLinkActive="active-link">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <div class="header__desktop__button ">
+                        <a href="/search" class="navlink" data-popdown-toggle="search-popdown" aria-haspopup="true"
+                            aria-expanded="false" aria-controls="search-popdown">
+
+                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.0203 8.14063C15.0203 12.2642 11.6781 15.6061 7.55484 15.6061C3.43059 15.6061 0.0873413 12.2642 0.0873413 8.14063C0.0873413 4.0169 3.43076 0.674133 7.55484 0.674133C11.6779 0.674133 15.0203 4.01689 15.0203 8.14063ZM14.1153 8.14063C14.1153 4.51669 11.1781 1.57913 7.55484 1.57913C3.93054 1.57913 0.992341 4.51675 0.992341 8.14063C0.992341 11.7643 3.93033 14.7011 7.55484 14.7011C11.1783 14.7011 14.1153 11.7644 14.1153 8.14063ZM10.4257 14.134L10.8888 13.8295C11.461 13.4533 11.9681 13.0363 12.4107 12.5785C12.8471 12.1272 13.1906 11.6576 13.4426 11.1694L13.7273 10.6181L14.1652 11.0577L20.294 17.2089C21.2354 18.1515 21.2354 19.6777 20.2934 20.621C19.3507 21.5612 17.8247 21.5612 16.8821 20.6199L10.4257 14.134ZM17.5226 19.9805C18.111 20.5681 19.0649 20.5681 19.6537 19.9809C20.2422 19.3915 20.2422 18.4377 19.6533 17.848L13.9394 12.1132C13.6942 12.4912 13.4013 12.856 13.0613 13.2076C12.6928 13.5887 12.2853 13.9432 11.839 14.2709L17.5226 19.9805ZM2.96534 7.78063H3.87034C3.87034 9.8045 5.51153 11.4451 7.53584 11.4451C9.56016 11.4451 11.2013 9.8045 11.2013 7.78063H12.1063C12.1063 10.3044 10.0599 12.3501 7.53584 12.3501C5.01178 12.3501 2.96534 10.3044 2.96534 7.78063Z"
+                                    fill="#8D6D44"></path>
+                            </svg>
+
+                            <span class="visually-hidden">Search</span>
+
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="header__desktop__button  main-menu--active">
+                        <a href="/cart" class="navlink navlink--cart" data-drawer-toggle="drawer-cart">
+
+                            <svg width="21" height="24" viewBox="0 0 21 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.7308 4.1048H17.8142L20.9989 7.07315L21 19.8904C21 21.933 19.4072 23.5902 17.4427 23.5902H3.55725C1.59275 23.5902 0 21.933 0 19.8904V7.07315L3.18966 4.1048H6.26916C6.65843 2.04442 8.40484 0.490234 10.5005 0.490234C12.5954 0.490234 14.3416 2.04454 14.7308 4.1048ZM13.7741 4.1048C13.402 2.58501 12.0773 1.46091 10.5005 1.46091C8.92294 1.46091 7.59799 2.58493 7.22594 4.1048H13.7741ZM19.6247 7.1123L17.4551 5.07548H3.54318L1.32769 7.1123H19.6247ZM0.933539 8.08298V19.8904C0.933539 21.397 2.10847 22.6196 3.55725 22.6196H17.4427C18.8915 22.6196 20.0665 21.397 20.0665 19.8904V8.08298H0.933539ZM5.78588 11.4589H6.71942C6.71942 13.6305 8.41217 15.3915 10.5005 15.3915C12.588 15.3915 14.2806 13.6304 14.2806 11.4589H15.2141C15.2141 14.1663 13.1037 16.3622 10.5005 16.3622C7.89648 16.3622 5.78588 14.1665 5.78588 11.4589Z"
+                                    fill="#846D48"></path>
+                            </svg>
+
+                            <span class="visually-hidden">Cart</span>
+
+                            <span class="header__cart__status">
+                                <span class="visually-hidden" data-header-cart-price="0">
+                                    $0.00
+                                </span>
+                                <span class="visually-hidden" data-header-cart-count="0">
+                                    (0)
+                                </span>
+
+                                <span data-header-cart-full="false"></span>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

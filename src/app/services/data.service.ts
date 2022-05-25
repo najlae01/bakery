@@ -67,8 +67,8 @@ export class DataService {
     return this.httpClient.post('http://127.0.0.1:8000/api/register', user);
   }
 
-  login(email: any, password:any){
-    return this.httpClient.post('http://127.0.0.1:8000/api/login', email, password);
+  login(user: User){
+    return this.httpClient.post('http://127.0.0.1:8000/api/login', user);
   }
 
   user(){

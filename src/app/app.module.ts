@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 
+import {NgToastModule} from 'ng-angular-popup';
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -31,6 +33,9 @@ import { UpdateProfileComponent } from './pages/update-profile/update-profile.co
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ProductByCategoryComponent } from './pages/product-by-category/product-by-category.component';
+import { NavbarComponent } from './pages/navbar/navbar.component';
+import { FooterComponent } from './pages/footer/footer.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -74,7 +79,10 @@ const routes: Routes = [
     UpdateProfileComponent,
     LoginComponent,
     RegisterComponent,
-    ProductByCategoryComponent
+    ProductByCategoryComponent,
+    NavbarComponent,
+    FooterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -82,6 +90,7 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgToastModule,
     ToastrModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Product } from 'src/app/product';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -9,18 +10,22 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class ProductPageComponent implements OnInit {
 
-  constructor(private param: ActivatedRoute, private dataservice: DataService) { }
-  getMealId: any;
-  menuData: any;
+  data: any;
+  id: any;
+  imageDirectorypathProducts: any = 'http://127.0.0.1:8000/storage/products/'
+  product = new Product();
+  constructor(private route: ActivatedRoute, private dataService: DataService) { }
+
   ngOnInit(): void {
-    this.getMealId = this.param.snapshot.paramMap.get('id');
-    console.log(this.getMealId, 'getmenu>>>');
-    if(this.getMealId)
-    {
-        this.menuData =  this.dataservice.productData.filter((value)=>{
-            return value.id == this.getMealId;
-        });
-        console.log(this.menuData, 'menudata>>>');
-    }
+    console.log(this.route.snapshot.params['id']);
+    this.id = this.route.snapshot.params['id'];
+    this.getProductData();
+  }
+  getProductData(){
+    this.dataService.getProduct(this.id).subscribe(res =>{
+      console.log(res);
+      this.data = res;
+      this.product = this.data;
+    })
   }
 }

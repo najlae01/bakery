@@ -1,24 +1,24 @@
 
 <div class="container">
 
-    <form (ngSubmit)="insertData()" class="form">
+    <form (ngSubmit)="register()" [formGroup]="form">
         <div class="form__text">
             Register
         </div>
 
         <div class="form__group">
             <label for="name" class="form__label">Name</label>
-            <input type="text" [(ngModel)]="user.name" class="form__input" placeholder="Name" id="name" required>
+            <input type="text" formControlName="name" class="form__input" placeholder="Name" id="name" required>
         </div>
 
         <div class="form__group">
             <label for="email" class="form__label">Email address</label>
-            <input type="email" [(ngModel)]="user.email" class="form__input" placeholder="Email address" id="email" required>
+            <input type="email" formControlName="email" class="form__input" placeholder="Email address" id="email" required>
         </div>
 
         <div class="form__group">
             <label for="password" class="form__label">Password</label>
-            <input type="password" [(ngModel)]="user.password" class="form__input" placeholder="Password" id="password" required>
+            <input type="password" formControlName="password" class="form__input" placeholder="Password" id="password" required>
         </div>
         <br/>
         <div class="form__button">

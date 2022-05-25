@@ -11,21 +11,22 @@ import { User } from 'src/app/user';
 export class HomeComponent implements OnInit {
 
   constructor(private toastr: ToastrService, private data: DataService) { }
- //userId: any;
   user: any;
-  courses: any;
+  //user = new User();
+  //courses: any;
   redir: any;
   dt: any;
   imageDirectorypath: any = 'http://127.0.0.1:8000/storage/categories/'
+  imageDirectorypathProducts: any = 'http://127.0.0.1:8000/storage/products/'
   categories: any;
-  productData: any;
+  products: any;
 
   ngOnInit(): void {
-    this.courses = [];
+    //this.courses = [];
     this.redir = this.redirect();
     //this.userId = this.data.getUser()
-    this.productData = this.data.productData;
     this.getCategoryData();
+    this.getProductData();
   }
 
   getCategoryData(){
@@ -33,6 +34,14 @@ export class HomeComponent implements OnInit {
     this.data.listCategory().subscribe(res =>{
       console.log(res);
       this.categories = res;
+    })
+  }
+
+  getProductData(){
+    console.log("Products list")
+    this.data.listProduct().subscribe(res =>{
+      console.log(res);
+      this.products = res;
     })
   }
 

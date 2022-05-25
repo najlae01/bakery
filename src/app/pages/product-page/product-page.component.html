@@ -1,11 +1,12 @@
+<app-navbar></app-navbar>
 <div class="container mt-5 mb-5">
     <div class="row">
-        <div class="col-lg-6" *ngIf="menuData">
-            <a [routerLink]="['menu']" class="btn btn-sm btn-dark mb-3">Back</a>
-            <img src="{{menuData[0].productImg}}" width="100%"/>
-            <h1 class="mt-3">{{menuData[0].productName}}</h1>
-            <p >{{menuData[0].productDetails}}</p>
-            <p >{{menuData[0].productPrice | currency: '$'}}</p>
+        <div class="col-lg-6" *ngIf="product">
+            <a [routerLink]="['/menu']" class="btn btn-sm btn-dark mb-3">Back</a>
+            <img src="{{imageDirectorypathProducts}}{{product.productImg}}" width="100%"/>
+            <h1 class="mt-3">{{product.productName}}</h1>
+            <p >{{product.productDetails}}</p>
+            <p >{{product.productPrice | currency: '$'}}</p>
         </div>
         <div class="col-lg-6 col-lg-12">
             <h1>Fill Details</h1>
@@ -18,3 +19,4 @@
         </div>
     </div>
 </div>
+<app-footer></app-footer>

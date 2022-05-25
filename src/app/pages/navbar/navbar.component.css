@@ -1,0 +1,38 @@
+.navbar-light .navbar-nav .nav-link 
+{
+    color: var(--tercery-color);
+    font-family: "Neutraface 2 Display",sans-serif;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link.active-link 
+{
+    color: var(--brand-color);
+    text-decoration: underline;
+}
+
+.navbar-light .navbar-nav .nav-link:hover
+{
+    color: var(--primary-color);
+}
+
+.navbar-brand:hover
+{
+    font-weight: bold;
+}
+.subheading a{
+    color: var(--brand-color);
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-family: "Great Vibes", cursive;
+  }
+.header__desktop__button {
+    margin-left: 25px;
+}
