@@ -1,12 +1,16 @@
-<form (ngSubmit)="updateCategory()" >
+<form (ngSubmit)="updateCategory()" [formGroup]="form">
     <div class="form-group">
         <label for="categoryName">Name</label>
-        <input type="text" name="categoryName" class="text form-control" [(ngModel)]="category.categoryName">
+        <input type="text" formControlName="categoryName" name="categoryName" class="text form-control" >
         <label for="categoryDetails">Details</label>
-        <input type="text" name="categoryDetails" class="text form-control" [(ngModel)]="category.categoryDetails">
+        <input type="text" formControlName="categoryDetails" name="categoryDetails" class="text form-control" >
         <label for="categoryImg">Image</label>
-        <input type="file" name="categoryImg" class="text form-control" [(ngModel)]="category.categoryImg">
+        <input type="file" formControlName="categoryImg" name="categoryImg" class="form-control"
+         (change)="uploadImage($event)" [ngClass]="{ 'is-invalid': submitted && f.categoryImg.errors}">
+         <div *ngIf="submitted && f.categoryImg.errors" class="invalid-feedback">
+             <div *ngIf="f.categoryImg.errors.required">Image is required</div>
+         </div>
     </div>
-    <button class="btn btn-dark btn -sm mt-4" >Submit</button>
-    <button class="btn btn-dark" [routerLink]="['']">Back</button>
+    <button class="btn btn-dark btn -sm mt-4">Submit</button>
+    <button class="btn" [routerLink]="['']">Back</button>
 </form>

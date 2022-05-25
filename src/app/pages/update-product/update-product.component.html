@@ -1,15 +1,19 @@
-<form (ngSubmit)="updateProduct()">
+<form (ngSubmit)="updateProduct()" [formGroup]="form">
     <div class="form-group">
         <label for="productName">Name</label>
-        <input type="text" name="productName" class="text form-control" [(ngModel)]="product.productName">
+        <input type="text" formControlName="productName" name="productName" class="text form-control" >
         <label for="productDetails">Details</label>
-        <input type="text" name="productDetails" class="text form-control" [(ngModel)]="product.productDetails">
+        <input type="text" formControlName="productDetails" name="productDetails" class="text form-control" >
         <label for="productPrice">Price</label>
-        <input type="number" name="productPrice" class="text form-control" [(ngModel)]="product.productPrice">
+        <input type="number" formControlName="productPrice" name="productPrice" class="text form-control" >
         <label for="productImg">Image</label>
-        <input type="file" name="productImg" class="text form-control" [(ngModel)]="product.productImg">
+        <input type="file" formControlName="productImg" name="productImg" class="form-control"
+         (change)="uploadImage($event)" [ngClass]="{ 'is-invalid': submitted && f.productImg.errors}">
+         <div *ngIf="submitted && f.productImg.errors" class="invalid-feedback">
+             <div *ngIf="f.productImg.errors.required">Image is required</div>
+         </div>
         <label for="category_id">Category</label>
-        <select name="category_id" class="text form-control" [(ngModel)]="product.category_id">
+        <select name="category_id" formControlName="category_id"  class="text form-control" >
             <option *ngFor="let category of categories" [ngValue]="category.id">{{category.categoryName}}</option>
         </select>
     </div>

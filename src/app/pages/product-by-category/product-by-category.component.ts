@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 
+import {ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-product-by-category',
   templateUrl: './product-by-category.component.html',
@@ -9,11 +11,11 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class ProductByCategoryComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private dataService: DataService) { }
+  constructor(private toastr: ToastrService, private route: ActivatedRoute, private dataService: DataService) { }
   products: any;
-  product: any;
   id: any;
   data: any;
+  dt: any;
   imageDirectorypath: any = 'http://127.0.0.1:8000/storage/products/'
   productData: any;
   ngOnInit(): void {
@@ -25,10 +27,10 @@ export class ProductByCategoryComponent implements OnInit {
 
   getProductData(){
     console.log("Liste des produits")
-    this.dataService.getProduct(this.id).subscribe(res =>{
+    this.dataService.products(this.id).subscribe(res =>{
       console.log(res);
       this.data = res;
-      this.product = this.data;
+      this.products = this.data;
     })
   }
 
@@ -36,6 +38,18 @@ export class ProductByCategoryComponent implements OnInit {
     //console.log(id);
     this.dataService.deleteProduct(id).subscribe(res =>{
       this.getProductData();
+      this.dt = res;
+      if(this.dt.status = true){
+        this.toastr.success(JSON.stringify(this.dt.message), '', {
+          timeOut: 2000,
+          progressBar: true
+        })
+      }else{
+        this.toastr.error(JSON.stringify(this.dt.message), '', {
+          timeOut: 2000,
+          progressBar: true
+        })
+      }
     })
   }
 

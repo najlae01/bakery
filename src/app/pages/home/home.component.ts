@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import {ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/user';
 
 @Component({
@@ -9,11 +10,12 @@ import { User } from 'src/app/user';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private data: DataService) { }
+  constructor(private toastr: ToastrService, private data: DataService) { }
  //userId: any;
   user: any;
   courses: any;
   redir: any;
+  dt: any;
   imageDirectorypath: any = 'http://127.0.0.1:8000/storage/categories/'
   categories: any;
   productData: any;
@@ -38,6 +40,18 @@ export class HomeComponent implements OnInit {
     //console.log(id);
     this.data.deleteCategory(id).subscribe(res =>{
       this.getCategoryData();
+      this.dt = res;
+      if(this.dt.status = true){
+        this.toastr.success(JSON.stringify(this.dt.message), '', {
+          timeOut: 2000,
+          progressBar: true
+        })
+      }else{
+        this.toastr.error(JSON.stringify(this.dt.message), '', {
+          timeOut: 2000,
+          progressBar: true
+        })
+      }
     })
   }
 

@@ -19,11 +19,11 @@ export class DataService {
     return this.httpClient.get('http://127.0.0.1:8000/api/product/'+id);
   }
 
-  addProduct(product: Product){
+  addProduct(product: any){
     return this.httpClient.post('http://127.0.0.1:8000/api/addProduct', product);
   }
 
-  updateProduct(id: any, product: Product){
+  updateProduct(id: any, product: any){
     return this.httpClient.put('http://127.0.0.1:8000/api/updateProduct/'+id, product);
   }
 
@@ -39,11 +39,15 @@ export class DataService {
     return this.httpClient.get('http://127.0.0.1:8000/api/category/'+id);
   }
 
-  addCategory(category: Category){
+  products(id: any){
+    return this.httpClient.get('http://127.0.0.1:8000/api/products/'+id);
+  }
+
+  addCategory(category: any){
     return this.httpClient.post('http://127.0.0.1:8000/api/addCategory', category);
   }
 
-  updateCategory(id: any, category: Category){
+  updateCategory(id: any, category: any){
     return this.httpClient.put('http://127.0.0.1:8000/api/updateCategory/'+id, category);
   }
 
