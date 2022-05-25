@@ -36,6 +36,17 @@ import { ProductByCategoryComponent } from './pages/product-by-category/product-
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -82,7 +93,9 @@ const routes: Routes = [
     ProductByCategoryComponent,
     NavbarComponent,
     FooterComponent,
-    CartComponent
+    CartComponent,
+    NavigationComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -95,6 +108,15 @@ const routes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     ToastrModule.forRoot(),
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

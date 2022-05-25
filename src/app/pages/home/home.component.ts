@@ -11,8 +11,8 @@ import { User } from 'src/app/user';
 export class HomeComponent implements OnInit {
 
   constructor(private toastr: ToastrService, private data: DataService) { }
-  user: any;
-  //user = new User();
+  id: any;
+  role: any;
   //courses: any;
   redir: any;
   dt: any;
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
   getCategoryData(){
     console.log("Liste des catégories")
     this.data.listCategory().subscribe(res =>{
-      console.log(res);
+      //console.log(res);
       this.categories = res;
     })
   }
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
   getProductData(){
     console.log("Products list")
     this.data.listProduct().subscribe(res =>{
-      console.log(res);
+      //console.log(res);
       this.products = res;
     })
   }
@@ -65,10 +65,10 @@ export class HomeComponent implements OnInit {
   }
 
   redirect(){
-    this.data.user().subscribe(res =>{
+    this.data.getUser().subscribe(res =>{
       console.log(res);
-      this.user = res;
-      if (this.user.is_Admin == 1){
+      this.id = res;
+      if (this.id == 1){
         return false;
       }else{
         return true;
