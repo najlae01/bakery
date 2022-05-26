@@ -57,19 +57,13 @@
           </a>
         </li>
         <li>
-          <a routerLink="/orders" class="active">
-            <i class='bx bx-coin-stack' ></i>
-            <span class="links_name">Orders</span>
-          </a>
-        </li>
-        <li>
-          <a routerLink="/users">
+          <a routerLink="/users" class="active">
             <i class='bx bx-coin-stack' ></i>
             <span class="links_name">Users</span>
           </a>
         </li>
         <li>
-          <a class="log_out" routerLink="" class="active">
+          <a class="log_out" (click) ="logout()" >
             <i class='bx bx-log-out'></i>
             <span class="links_name">Log out</span>
           </a>
@@ -87,9 +81,6 @@
       
     </nav>
     
-   
-   
-   
   </section>
 
   

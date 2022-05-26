@@ -36,3 +36,7 @@
 .header__desktop__button {
     margin-left: 25px;
 }
+
+.nav-item{
+    cursor: pointer;
+}

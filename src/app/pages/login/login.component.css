@@ -34,6 +34,7 @@ body {
   font-size: 30px;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 8px;
 }
 
 
@@ -89,6 +90,7 @@ body {
 }
 
 .btn {
+  margin-left: 15px;
   display: inline-block;
   cursor: pointer;
   font-size: 15px;

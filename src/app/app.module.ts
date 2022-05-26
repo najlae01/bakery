@@ -27,7 +27,6 @@ import { UpdateCategoryComponent } from './pages/update-category/update-category
 import { ListProductComponent } from './pages/list-product/list-product.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
 import { UpdateProductComponent } from './pages/update-product/update-product.component';
-import { ListOrderComponent } from './pages/list-order/list-order.component';
 import { ListUserComponent } from './pages/list-user/list-user.component';
 import { UpdateProfileComponent } from './pages/update-profile/update-profile.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -54,12 +53,12 @@ import { ListGalleryComponent } from './pages/list-gallery/list-gallery.componen
 import { AddGalleryComponent } from './pages/add-gallery/add-gallery.component';
 import { ChefsComponent } from './pages/chefs/chefs.component';
 import { GalleriesComponent } from './pages/galleries/galleries.component';
-import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { MenuPerCategoryComponent } from './pages/menu-per-category/menu-per-category.component';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
+  { path: 'home', component: HomeComponent},
   { path: 'menu', component: MenuComponent},
   { path: 'product/:id', component: ProductPageComponent},
   { path: 'about', component: AboutComponent},
@@ -75,8 +74,8 @@ const routes: Routes = [
   { path: 'products', component: ListProductComponent},
   { path: 'addproduct', component: AddProductComponent},
   { path: 'updateproduct/:id', component: UpdateProductComponent},
-  { path: 'orders', component: ListOrderComponent},
   { path: 'users', component: ListUserComponent},
+  { path: '', component: WelcomeComponent},
 ];
 
 @NgModule({
@@ -95,9 +94,8 @@ const routes: Routes = [
     ListProductComponent,
     AddProductComponent,
     UpdateProductComponent,
-    ListOrderComponent,
     ListUserComponent,
-    UpdateProfileComponent,
+    UpdateProfileComponent, 
     LoginComponent,
     RegisterComponent,
     ProductByCategoryComponent,
@@ -113,9 +111,9 @@ const routes: Routes = [
     AddGalleryComponent,
     ChefsComponent,
     GalleriesComponent,
-    TestimonialsComponent,
     CategoriesComponent,
-    MenuPerCategoryComponent
+    MenuPerCategoryComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

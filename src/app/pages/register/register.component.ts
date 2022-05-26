@@ -37,11 +37,6 @@ export class RegisterComponent implements OnInit {
         this.toast.success({detail:"Success Message", summary:this.dt.message, duration: 4000});
         this.form.reset();
         this.router.navigate(['']);
-        /*this.userRole = this.dt;
-        if(this.userRole.is_Admin == 1)
-          this.router.navigate(['dashboard']);
-        else
-          this.router.navigate(['']); */
       }else
         this.toast.error({detail:"Error Message", summary:this.dt.message, duration: 4000});
     }

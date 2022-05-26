@@ -20,19 +20,19 @@
                 <li class="nav-item">
                     <a class="nav-link" [routerLink]="['/gallery']" routerLinkActive="active-link">GALLERY</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/testimonials']" routerLinkActive="active-link">TESTIMONIALS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/blog']" routerLinkActive="active-link">BLOG</a>
-                </li>
                  <li class="nav-item">
                     <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active-link">ABOUT</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " [routerLink]="['/contact']" routerLinkActive="active-link">CONTACT</a>
                 </li>
-                <li class="nav-item">
+                <li *ngIf="isAuth == false" class="nav-item">
+                    <a class="nav-link " [routerLink]="['/login']" routerLinkActive="active-link">LOGIN</a>
+                </li>
+                <li *ngIf="isAuth == false" class="nav-item">
+                    <a class="nav-link " [routerLink]="['/register']" routerLinkActive="active-link">REGISTER</a>
+                </li>
+                <li *ngIf="isAuth" class="nav-item">
                     <div class="header__desktop__button ">
                         <a href="/search" class="navlink" data-popdown-toggle="search-popdown" aria-haspopup="true"
                             aria-expanded="false" aria-controls="search-popdown">
@@ -49,7 +49,7 @@
                         </a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <li *ngIf="isAuth"  class="nav-item">
                     <div class="header__desktop__button  main-menu--active">
                         <a href="/cart" class="navlink navlink--cart" data-drawer-toggle="drawer-cart">
 
@@ -59,21 +59,18 @@
                                     d="M14.7308 4.1048H17.8142L20.9989 7.07315L21 19.8904C21 21.933 19.4072 23.5902 17.4427 23.5902H3.55725C1.59275 23.5902 0 21.933 0 19.8904V7.07315L3.18966 4.1048H6.26916C6.65843 2.04442 8.40484 0.490234 10.5005 0.490234C12.5954 0.490234 14.3416 2.04454 14.7308 4.1048ZM13.7741 4.1048C13.402 2.58501 12.0773 1.46091 10.5005 1.46091C8.92294 1.46091 7.59799 2.58493 7.22594 4.1048H13.7741ZM19.6247 7.1123L17.4551 5.07548H3.54318L1.32769 7.1123H19.6247ZM0.933539 8.08298V19.8904C0.933539 21.397 2.10847 22.6196 3.55725 22.6196H17.4427C18.8915 22.6196 20.0665 21.397 20.0665 19.8904V8.08298H0.933539ZM5.78588 11.4589H6.71942C6.71942 13.6305 8.41217 15.3915 10.5005 15.3915C12.588 15.3915 14.2806 13.6304 14.2806 11.4589H15.2141C15.2141 14.1663 13.1037 16.3622 10.5005 16.3622C7.89648 16.3622 5.78588 14.1665 5.78588 11.4589Z"
                                     fill="#846D48"></path>
                             </svg>
-
-                            <span class="visually-hidden">Cart</span>
-
                             <span class="header__cart__status">
-                                <span class="visually-hidden" data-header-cart-price="0">
-                                    $0.00
-                                </span>
-                                <span class="visually-hidden" data-header-cart-count="0">
-                                    (0)
+                                <span data-header-cart-count="0">
+                                    {{totalItem}}
                                 </span>
 
                                 <span data-header-cart-full="false"></span>
                             </span>
                         </a>
                     </div>
+                </li>
+                <li *ngIf="isAuth" class="nav-item">
+                    <a class="nav-link " (click) ="logout()" routerLinkActive="active-link">LOGOUT</a>
                 </li>
             </ul>
         </div>

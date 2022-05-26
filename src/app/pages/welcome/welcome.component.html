@@ -1,0 +1,58 @@
+    <app-navbar></app-navbar>
+     <div class="banner">
+         <div class="content">
+             <h1 class="mb-5">Beleniss<br/>Dreamy Taste</h1>
+             <a [routerLink]="['menu']">ORDER NOW <i class="bi bi-arrow-right"></i></a>
+         </div>
+     </div>
+     <div class="container mt-5 mb-5">
+         <div class="col-md-12 text-center heading-section ftco-animate">
+             <span class="subheading">How To</span>
+             <h2 class="mb-4">Order</h2>
+         </div>
+         <div class="row mt-5">
+             <!--one-->
+             <div class="col-lg-4 mt-2">
+                 <div class="stepBox">
+                     <h1>1</h1>
+                     <p>Choose Your Product</p>
+                 </div>
+             </div>
+             <!--two-->
+             <div class="col-lg-4 mt-2">
+                 <div class="stepBox">
+                     <h1>2</h1>
+                     <p>Provide Us With Your Address</p>
+                 </div>
+             </div>
+             <!--three-->
+             <div class="col-lg-4 mt-2">
+                 <div class="stepBox">
+                     <h1>3</h1>
+                     <p>Your Order Will Be Delivered In A Minute</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!--Categories-->
+     <app-categories></app-categories>
+     <!--End Categories-->
+     
+     <!--productbox-->
+     <div class="container mt-4 mb-4">
+         <div class="col-md-12 text-center heading-section ftco-animate">
+             <span class="subheading">Our</span>
+             <h2 class="mb-4">Customers Favorites</h2>
+         </div>
+         <div class="row">
+             <div class="col-lg-3 mt-3" *ngFor="let product of products">
+                 <div class="productbox">
+                     <img src="{{imageDirectorypathProducts}}{{product.productImg}}"/>
+                     <h1 class="text-center">{{product.productName}}</h1>
+                     <p class="text-center">{{product.productPrice | currency: '$'}}</p>
+                 </div>
+             </div>
+         </div>
+         <a [routerLink]="['/menu']" class="viewmorebtn">see more <i class="bi bi-arrow-right"></i></a>
+     </div>
+     <app-footer></app-footer>

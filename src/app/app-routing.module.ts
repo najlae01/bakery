@@ -14,7 +14,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListCategoryComponent } from './pages/list-category/list-category.component';
 import { ListChefComponent } from './pages/list-chef/list-chef.component';
 import { ListGalleryComponent } from './pages/list-gallery/list-gallery.component';
-import { ListOrderComponent } from './pages/list-order/list-order.component';
 import { ListProductComponent } from './pages/list-product/list-product.component';
 import { ListUserComponent } from './pages/list-user/list-user.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -25,7 +24,6 @@ import { ProductByCategoryComponent } from './pages/product-by-category/product-
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 import { UpdateCategoryComponent } from './pages/update-category/update-category.component';
 import { UpdateChefComponent } from './pages/update-chef/update-chef.component';
 import { UpdateProductComponent } from './pages/update-product/update-product.component';
@@ -57,10 +55,8 @@ const routes: Routes = [
   { path: 'gallery', component: GalleriesComponent},
   { path: 'gallerylist', component: ListGalleryComponent},
   { path: 'addgallery', component: AddGalleryComponent},
-  { path: 'orders', component: ListOrderComponent},
   { path: 'users', component: ListUserComponent},
   { path: 'dashboard', component: DashboardComponent},
-  { path: 'testimonials', component: TestimonialsComponent},
   { path: 'menu/:id', component: MenuPerCategoryComponent},
 ];
 
