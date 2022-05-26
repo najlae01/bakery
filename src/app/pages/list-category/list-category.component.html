@@ -1,1 +1,23 @@
-<p>list-category works!</p>
+<td><button class="btn btn-warning btn-sm mx-2" routerLink="/addcategory">Add</button></td>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Details</th>
+            <th>Action</th>
+        </tr>    
+    </thead>
+    <tbody>
+        <tr *ngFor="let category of categories">
+            <th scope="row">{{category.id}}</th>
+            <td><img src="{{imageDirectorypath}}{{category.categoryImg}}" height="100px"/></td>
+            <td >{{category.categoryName}}</td>
+            <td >{{category.categoryDetails}}</td>
+            <td><button class="btn btn-danger btn-sm" (click)="deleteData(category.id)">Delete</button></td>
+            <td><button class="btn btn-warning btn-sm mx-2" routerLink="/updatecategory/{{category.id}}">Update</button></td>
+            <td><button class="btn btn-primary btn-sm mx-2" routerLink="/products/{{category.id}}">View Products</button></td>
+        </tr>
+    </tbody>
+</table>

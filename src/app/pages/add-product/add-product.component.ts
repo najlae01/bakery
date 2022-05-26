@@ -57,6 +57,7 @@ export class AddProductComponent implements OnInit {
       this.form.get('productName')?.reset();
       this.form.get('productDetails')?.reset();
       this.form.get('productPrice')?.reset();
+      this.form.get('category_id')?.reset();
     })
   }
 

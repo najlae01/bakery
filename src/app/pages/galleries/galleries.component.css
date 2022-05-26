@@ -1,0 +1,70 @@
+.ftco-section{
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+  }
+  .subheading a{
+      color: var(--brand-color);
+      font-weight: normal;
+      font-size: 40px;
+      margin-bottom: 0;
+      line-height: 1.2;
+      font-family: "Great Vibes", cursive;
+    }
+   h2 {
+      color: var(--tercery-color);
+      font-weight: bold;
+      font-size: 60px;
+      margin-bottom: 0;
+      font-family: "Great Vibes", cursive;
+      font-style: italic;
+    }
+    .heading-section.heading-section-white p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .carousel-conatiner{
+        position: relative;
+        margin: auto;
+        text-align: center;
+        width: 700px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px #dce1dc;
+    }
+    .carousel-conatiner img{
+        display: none;
+        width: 700px;
+        border-radius: 15px;
+    }
+    
+    .carousel-conatiner img.image-active{
+        display: block;
+        width: 100%;
+        height: 400px;
+    }
+
+    .carousel-dot-conatiner{
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 13px;
+        width: 13px;
+        margin: 0 5px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        transition: opacity 0.6s ease;
+        opacity: 0.5;
+    }
+
+    .active, .dot:hover{
+        opacity: 1;
+        
+    }

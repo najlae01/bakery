@@ -1,0 +1,24 @@
+<td><button class="btn btn-warning btn-sm mx-2" [routerLink]="['/addchef']">Add</button></td>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Details</th>
+            <th scope="col">Role</th>
+            <th>Action</th>
+        </tr>    
+    </thead>
+    <tbody>
+        <tr *ngFor="let chef of chefs">
+            <th scope="row">{{chef.id}}</th>
+            <td><img src="{{imageDirectorypath}}{{chef.chefImg}}" height="100px"/></td>
+            <td >{{chef.chefName}}</td>
+            <td >{{chef.chefDetails}}</td>
+            <td >{{chef.chefRole}}</td>
+            <td><button class="btn btn-danger btn-sm" (click)="deleteData(chef.id)">Delete</button></td>
+            <td><button class="btn btn-warning btn-sm mx-2" routerLink="/updatechef/{{chef.id}}">Update</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="container mt-5 mb-5">
+    <div class="col-md-12 text-center heading-section ftco-animate">
+        <h2 class="mb-4">{{category.categoryName}}</h2>
+        <span class="subheading">{{category.categoryDetails}}</span>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 " *ngFor="let product of products">
+            <div class="productbox mt-3 mb-3">
+                <img src="{{imageDirectorypath}}{{product.productImg}}">
+                <h1 class="text-center">{{product.productName}}</h1>
+                <p class="text-center">{{product.productDetails}}</p>
+                <p class="text-center">{{product.productPrice | currency: '$'}}</p>
+                <a class="buybtn" [routerLink]="['/product/',product.id]">ORDER NOW <i class="bi bi-bag"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

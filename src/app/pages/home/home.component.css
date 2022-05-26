@@ -14,12 +14,15 @@
     position: absolute;
 }
 
-.content h1
-{
-    color: #fff;
-    font-size: 55px;
+
+.content h1{
+    color: var(--secondary-color);
     font-weight: bold;
-}
+    font-size: 55px;
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-family: "Great Vibes", cursive;
+  }
 
 .content a
 {
@@ -45,12 +48,22 @@
     text-align: center;
 }
 
-.stepBox h1
-{
-    font-size: 50px;
+.subheading {
+    color: var(--brand-color);
+    font-weight: normal;
+    font-size: 40px;
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-family: "Great Vibes", cursive;
+  }
+ h2 {
+    color: var(--tercery-color);
     font-weight: bold;
-    color: var(--primary-color);
-}
+    font-size: 60px;
+    margin-bottom: 0;
+    font-family: "Great Vibes", cursive;
+    font-style: italic;
+  }
 .stepBox p
 {
     font-size: 15px;
@@ -82,6 +95,9 @@
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
+    color: var(--tercery-color);
+    font-family: "Neutraface 2 Display",sans-serif;
+    font-style: normal;
 }
 
 .viewmorebtn

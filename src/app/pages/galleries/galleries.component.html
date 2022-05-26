@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<!-- staff section --- gallery starts -->
+
+<section class="ftco-section mb-5" id="gallery">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-12 text-center heading-section ftco-animate">
+                <span class="subheading"><a [routerLink]="['/galleries']">Gallery</a></span>
+                <h2 class="mb-4">Our Hot Picked Cakes</h2>
+            </div>
+        </div>
+        <div *ngIf="galleries && galleries.length > 0" class="carousel-conatiner">
+        <img *ngFor="let gallery of galleries; let i=index" src="{{imageDirectorypath}}{{gallery.galleryImg}}" 
+        [ngClass]="{'image-active': selectedIndex === i}">
+        <div *ngIf="indicators" class="carousel-dot-conatiner">
+            <span *ngFor="let dot of galleries; let i=index" class="dot"
+            [ngClass] = "{'active': selectedIndex === i}"
+            (click)="selectImage(i)"></span>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- staff section --- gallery ends -->
+<app-footer></app-footer>

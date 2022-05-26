@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<!-- staff section --- chef starts -->
+
+<section class="ftco-section" id="chef">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-12 text-center heading-section ftco-animate">
+                <span class="subheading"><a [routerLink]="['/chefs']">Chefs</a></span>
+                <h2 class="mb-4">Our Master Chef</h2>
+            </div>
+        </div>
+        <div class="container mt-5 mb-5">
+        <div class="row" >
+            <div class="col-md-6 col-lg-3 ftco-animate" *ngFor="let chef of chefs">
+                <div class="staff mt-3 mb-3">
+                    <img src="{{imageDirectorypath}}{{chef.chefImg}}">
+                    <div class="text pt-4">
+                        <h3 class="text">{{chef.chefName}}</h3>
+                        <span class="position mb-2">{{chef.chefRole}}</span>
+                        <div class="faded">
+                            <ul class="ftco-social d-flex">
+                                <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li class="ftco-animate"><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- staff section --- chef ends -->
+<app-footer></app-footer>

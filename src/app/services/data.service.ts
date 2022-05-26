@@ -79,36 +79,44 @@ export class DataService {
     return this.httpClient.get('http://127.0.0.1:8000/api/logout');
   }
 
-  productData = [
-    {
-      id:1,
-      productName: "Panner Grilled Sandwich",
-      productDetails: "Pan-fried masala paneer",
-      productPrice: 20,
-      productImg: "../../../assets/img/paneer-grilled-sandwich.jpg"
-    },
-    {
-      id:2,
-      productName: "Veggie Supreme",
-      productDetails: "Healthy and Yummy Beans Creamy Veggie Salad.",
-      productPrice: 30,
-      productImg: "../../../assets/img/veggie-supreme.jpg"
-    },
-    {
-      id:3,
-      productName: "Avocado Brunch",
-      productDetails: "Vegetarian Avocado Brunch with Avocado.",
-      productPrice: 25,
-      productImg: "../../../assets/img/avocado.jpg"
-    },
-    {
-      id:4,
-      productName: "Oreo Cupcakes",
-      productDetails: "Oreo Cupcakes with cookies.",
-      productPrice: 10,
-      productImg: "../../../assets/img/oreo-cupcakes.jpg"
-    },
-  ];
+  listGallery(){
+    return this.httpClient.get('http://127.0.0.1:8000/api/galleries');
+  }
 
+  getGallery(id: any){
+    return this.httpClient.get('http://127.0.0.1:8000/api/gallery/'+id);
+  }
+
+  addGallery(gallery: any){
+    return this.httpClient.post('http://127.0.0.1:8000/api/addGallery', gallery);
+  }
+
+  updateGallery(id: any, gallery: any){
+    return this.httpClient.put('http://127.0.0.1:8000/api/updateGallery/'+id, gallery);
+  }
+
+  deleteGallery(id: any){
+    return this.httpClient.get('http://127.0.0.1:8000/api/deleteGallery/'+id);
+  }
+
+  listChef(){
+    return this.httpClient.get('http://127.0.0.1:8000/api/chefs');
+  }
+
+  getChef(id: any){
+    return this.httpClient.get('http://127.0.0.1:8000/api/chef/'+id);
+  }
+
+  addChef(chef: any){
+    return this.httpClient.post('http://127.0.0.1:8000/api/addChef', chef);
+  }
+
+  updateChef(id: any, chef: any){
+    return this.httpClient.put('http://127.0.0.1:8000/api/updateChef/'+id, chef);
+  }
+
+  deleteChef(id: any){
+    return this.httpClient.get('http://127.0.0.1:8000/api/deleteChef/'+id);
+  }
 
 }

@@ -1,5 +1,8 @@
 .ftco-bg-dark {
     background: var(--secondary-color);
+    color: var(--tercery-color);
+    font-family: "Neutraface 2 Display",sans-serif;
+    font-style: normal;
   }
   
   .ftco-footer {

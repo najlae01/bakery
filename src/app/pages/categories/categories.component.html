@@ -1,0 +1,15 @@
+<div class="container mt-4 mb-4">
+    <div class="col-md-12 text-center heading-section ftco-animate">
+        <span class="subheading">Our</span>
+        <h2 class="mb-4">Specialties</h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let category of categories">
+            <div class="categorybox">
+                <img src="{{imageDirectorypath}}{{category.categoryImg}}"
+                routerLink="/menu/{{category.id}}"/>
+                <h1 class="text-center" routerLink="/menu/{{category.id}}">{{category.categoryName}}</h1>
+            </div>
+        </div>
+    </div>
+</div>

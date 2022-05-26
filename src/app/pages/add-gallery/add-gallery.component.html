@@ -1,0 +1,12 @@
+<form (ngSubmit)="insertData()" [formGroup]="form">
+    <div class="form-group">
+        <label for="galleryImg">Image</label>
+        <input type="file" formControlName="galleryImg" name="galleryImg" class="form-control" (change)="uploadImage($event)"
+            [ngClass]="{ 'is-invalid': submitted && f.galleryImg.errors}">
+        <div *ngIf="submitted && f.galleryImg.errors" class="invalid-feedback">
+            <div *ngIf="f.galleryImg.errors.required">Image is required</div>
+        </div>
+    </div>
+    <button class="btn btn-dark btn -sm mt-4">Submit</button>
+    <button class="btn" [routerLink]="['/gallerylist']">Back</button>
+</form>

@@ -47,6 +47,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { AddChefComponent } from './pages/add-chef/add-chef.component';
+import { UpdateChefComponent } from './pages/update-chef/update-chef.component';
+import { ListChefComponent } from './pages/list-chef/list-chef.component';
+import { ListGalleryComponent } from './pages/list-gallery/list-gallery.component';
+import { AddGalleryComponent } from './pages/add-gallery/add-gallery.component';
+import { ChefsComponent } from './pages/chefs/chefs.component';
+import { GalleriesComponent } from './pages/galleries/galleries.component';
+import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { MenuPerCategoryComponent } from './pages/menu-per-category/menu-per-category.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -95,7 +105,17 @@ const routes: Routes = [
     FooterComponent,
     CartComponent,
     NavigationComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddChefComponent,
+    UpdateChefComponent,
+    ListChefComponent,
+    ListGalleryComponent,
+    AddGalleryComponent,
+    ChefsComponent,
+    GalleriesComponent,
+    TestimonialsComponent,
+    CategoriesComponent,
+    MenuPerCategoryComponent
   ],
   imports: [
     BrowserModule,

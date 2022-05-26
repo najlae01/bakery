@@ -1,0 +1,43 @@
+.subheading {
+    color: var(--brand-color);
+    font-weight: normal;
+    font-size: 40px;
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-family: "Great Vibes", cursive;
+  }
+ h2 {
+    color: var(--tercery-color);
+    font-weight: bold;
+    font-size: 60px;
+    margin-bottom: 0;
+    font-family: "Great Vibes", cursive;
+    font-style: italic;
+  }
+
+  .categorybox
+{
+    padding: 10px 5px;
+}
+
+.categorybox img
+{
+    cursor: pointer;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.categorybox h1
+{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: var(--tercery-color);
+    font-family: "Neutraface 2 Display",sans-serif;
+    font-style: normal;
+}
+
+
