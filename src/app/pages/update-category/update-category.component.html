@@ -1,16 +1,44 @@
-<form (ngSubmit)="updateCategory()" [formGroup]="form">
-    <div class="form-group">
-        <label for="categoryName">Name</label>
-        <input type="text" formControlName="categoryName" name="categoryName" class="text form-control" >
-        <label for="categoryDetails">Details</label>
-        <input type="text" formControlName="categoryDetails" name="categoryDetails" class="text form-control" >
-        <label for="categoryImg">Image</label>
-        <input type="file" formControlName="categoryImg" name="categoryImg" class="form-control"
-         (change)="uploadImage($event)" [ngClass]="{ 'is-invalid': submitted && f.categoryImg.errors}">
-         <div *ngIf="submitted && f.categoryImg.errors" class="invalid-feedback">
-             <div *ngIf="f.categoryImg.errors.required">Image is required</div>
-         </div>
+<app-navigation></app-navigation>
+<div class="wrapper ">
+    <div class="title">
+        Update Category {{category.categoryName}}
     </div>
-    <button class="btn btn-dark btn -sm mt-4">Submit</button>
-    <button class="btn" [routerLink]="['']">Back</button>
-</form>
+
+    <div class="form">
+        <form (ngSubmit)="updateCategory()" [formGroup]="form">
+
+            <div class="inputfield">
+                <label>Csategory Name</label>
+                <input type="text" formControlName="categoryName" name="categoryName" class="input">
+            </div>
+            <div class="inputfield">
+                <label>Details</label>
+                <input type="text" formControlName="categoryDetails" name="categoryDetails" class="input">
+            </div>
+            <div class="inputfield">
+                <label>Images</label>
+                <input type="file" formControlName="categoryImg" name="categoryImg" class="form-control"
+                    (change)="uploadImage($event)" [ngClass]="{ 'is-invalid': submitted && f.categoryImg.errors}">
+
+            </div>
+
+            <div *ngIf="submitted && f.categoryImg.errors" class="invalid-feedback">
+                <div *ngIf="f.categoryImg.errors.required">Image is required</div>
+            </div>
+
+            <div class="inputfield terms">
+                <label class="check">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p> I'am sure </p>
+            </div>
+            <div class="inputfield">
+                <input type="submit" value="Submit" class="btn">
+            </div>
+            <div class="inputfield">
+                <input [routerLink]="['/dashboard']" value="Back" class="btn">
+            </div>
+        </form>
+    </div>
+</div>

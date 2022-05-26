@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Category } from 'src/app/category';
+import { CartService } from 'src/app/services/cart.service';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class MenuPerCategoryComponent implements OnInit {
 
-  constructor( private route: ActivatedRoute, private dataService: DataService) { }
+  constructor( private route: ActivatedRoute, private dataService: DataService, private cartService: CartService) { }
   products: any;
   id: any;
   data: any;
@@ -30,6 +31,9 @@ export class MenuPerCategoryComponent implements OnInit {
       this.data = res;
       this.category = this.data;
     })
+  }
+  addtocart(item: any){
+    this.cartService.addtoCart(item);
   }
 
   getProductData(){

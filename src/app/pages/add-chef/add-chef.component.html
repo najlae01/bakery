@@ -1,18 +1,47 @@
-<form (ngSubmit)="insertData()" [formGroup]="form">
-    <div class="form-group">
-        <label for="chefName">Name</label>
-        <input type="text" formControlName="chefName" name="chefName" class="text form-control">
-        <label for="chefDetails">Details</label>
-        <input type="text" formControlName="chefDetails" name="chefDetails" class="text form-control">
-        <label for="chefRole">Role</label>
-        <input type="text" formControlName="chefRole" name="chefRole" class="text form-control">
-        <label for="chefImg">Image</label>
-        <input type="file" formControlName="chefImg" name="chefImg" class="form-control" (change)="uploadImage($event)"
-            [ngClass]="{ 'is-invalid': submitted && f.chefImg.errors}">
-        <div *ngIf="submitted && f.chefImg.errors" class="invalid-feedback">
-            <div *ngIf="f.chefImg.errors.required">Image is required</div>
+<app-navigation></app-navigation>
+    <div class="wrapper">
+        <div class="title">
+            New Chef
+        </div>
+
+        <div class="form">
+            <form (ngSubmit)="insertData()" [formGroup]="form">
+
+                <div class="inputfield">
+                    <label>Name</label>
+                    <input type="text" formControlName="chefName" name="chefName" class="input">
+                </div>
+                <div class="inputfield">
+                    <label>Description</label>
+                    <input type="text" formControlName="chefDetails" name="chefDetails" class="input">
+                </div>
+                <div class="inputfield">
+                    <label>Role</label>
+                    <input type="text" formControlName="chefRole" name="chefRole" class="input">
+                </div>
+
+                <div class="inputfield">
+                    <label>Image</label>
+                    <input type="file" formControlName="chefImg" name="chefImg" class="form-control"
+                        (change)="uploadImage($event)" [ngClass]="{ 'is-invalid': submitted && f.chefImg.errors}">
+                    <div *ngIf="submitted && f.chefImg.errors" class="invalid-feedback">
+                        <div *ngIf="f.chefImg.errors.required">Image is required</div>
+                    </div>
+                </div>
+
+                <div class="inputfield terms">
+                    <label class="check">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p> I'am sure </p>
+                </div>
+                <div class="inputfield">
+                    <input type="submit" value="Submit" class="btn">
+                </div>
+                <div class="inputfield">
+                    <input [routerLink]="['/dashboard']" value="Back" class="btn">
+                </div>
+            </form>
         </div>
     </div>
-    <button class="btn btn-dark btn -sm mt-4">Submit</button>
-    <button class="btn" [routerLink]="['/cheflist']">Back</button>
-</form>

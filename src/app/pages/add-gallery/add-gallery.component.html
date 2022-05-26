@@ -1,12 +1,34 @@
-<form (ngSubmit)="insertData()" [formGroup]="form">
-    <div class="form-group">
-        <label for="galleryImg">Image</label>
-        <input type="file" formControlName="galleryImg" name="galleryImg" class="form-control" (change)="uploadImage($event)"
-            [ngClass]="{ 'is-invalid': submitted && f.galleryImg.errors}">
-        <div *ngIf="submitted && f.galleryImg.errors" class="invalid-feedback">
-            <div *ngIf="f.galleryImg.errors.required">Image is required</div>
+<app-navigation></app-navigation>
+    <div class="wrapper">
+        <div class="title mb-5">
+            New Image To Your Gallery
+        </div>
+
+        <div class="form">
+            <form (ngSubmit)="insertData()" [formGroup]="form">
+
+                <div class="inputfield">
+                    <label>Image</label>
+                    <input type="file" formControlName="galleryImg" name="galleryImg" class="form-control"
+                        (change)="uploadImage($event)" [ngClass]="{ 'is-invalid': submitted && f.galleryImg.errors}">
+                    <div *ngIf="submitted && f.galleryImg.errors" class="invalid-feedback">
+                        <div *ngIf="f.galleryImg.errors.required">Image is required</div>
+                    </div>
+                </div>
+
+                <div class="inputfield terms">
+                    <label class="check">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p> I'am sure </p>
+                </div>
+                <div class="inputfield">
+                    <input type="submit" value="Submit" class="btn">
+                </div>
+                <div class="inputfield">
+                    <input [routerLink]="['/dashboard']" value="Back" class="btn">
+                </div>
+            </form>
         </div>
     </div>
-    <button class="btn btn-dark btn -sm mt-4">Submit</button>
-    <button class="btn" [routerLink]="['/gallerylist']">Back</button>
-</form>

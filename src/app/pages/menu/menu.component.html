@@ -7,7 +7,7 @@
                 <h1 class="text-center">{{product.productName}}</h1>
                 <p class="text-center">{{product.productDetails}}</p>
                 <p class="text-center">{{product.productPrice | currency: '$'}}</p>
-                <a class="buybtn" [routerLink]="['/product/',product.id]">ORDER NOW <i class="bi bi-bag"></i></a>
+                <a class="buybtn" (click)=addtocart(product)>Add To Cart<i class="bi bi-bag"></i></a>
             </div>
         </div>
     </div>

@@ -1,27 +1,106 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>bakery</span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-  </mat-sidenav-content>
-</mat-sidenav-container>
+
+<div class="sidebar">
+    
+      <ul class="nav-links">
+        <li>
+          <a routerLink="/dashboard">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+          <li>
+            <a routerLink="/categories" class="active">
+              <i class='bx bx-grid-alt' ></i>
+              <span class="links_name">Categories</span>
+            </a>
+          </li>
+          <li>
+          <a routerLink="/addcategory">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">New Category</span>
+          </a>
+        </li>
+          <li>
+            <a routerLink="/products" class="active">
+              <i class='bx bx-grid-alt' ></i>
+              <span class="links_name">Cakes</span>
+            </a>
+          </li>
+          <li>
+          <a routerLink="/addproduct">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">New Cake</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/cheflist" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Chefs</span>
+          </a>
+        </li>
+        <li>
+        <a routerLink="/addchef">
+          <i class='bx bx-list-ul' ></i>
+          <span class="links_name">New Chef</span>
+        </a>
+      </li>
+        <li>
+          <a routerLink="/gallerylist" class="active">
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="links_name">Gallery</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/addgallery" >
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="links_name">New Image</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/orders" class="active">
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name">Orders</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/users">
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name">Users</span>
+          </a>
+        </li>
+        <li>
+          <a class="log_out" routerLink="" class="active">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <H1>Welcome to Your WebSite</H1>
+        
+      </div>
+      
+    </nav>
+    
+   
+   
+   
+  </section>
+
+  
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+ let sidebarBtn = document.querySelector(".sidebarBtn");
+ sidebarBtn.onclick = function() {
+   sidebar.classList.toggle("active");
+   if(sidebar.classList.contains("active")){
+   sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+ }else
+   sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+ }
+  </script>

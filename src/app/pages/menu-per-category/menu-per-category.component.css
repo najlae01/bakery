@@ -49,4 +49,9 @@
       border-radius: 5px;
       cursor: pointer;
   }
+  .productbox img:hover
+  {
+      transition: 0.3s ease-in-out;
+      transform: scale(1.1);
+  }
   

@@ -1,22 +1,55 @@
-<form (ngSubmit)="updateProduct()" [formGroup]="form">
-    <div class="form-group">
-        <label for="productName">Name</label>
-        <input type="text" formControlName="productName" name="productName" class="text form-control" >
-        <label for="productDetails">Details</label>
-        <input type="text" formControlName="productDetails" name="productDetails" class="text form-control" >
-        <label for="productPrice">Price</label>
-        <input type="number" formControlName="productPrice" name="productPrice" class="text form-control" >
-        <label for="productImg">Image</label>
-        <input type="file" formControlName="productImg" name="productImg" class="form-control"
-         (change)="uploadImage($event)" [ngClass]="{ 'is-invalid': submitted && f.productImg.errors}">
-         <div *ngIf="submitted && f.productImg.errors" class="invalid-feedback">
-             <div *ngIf="f.productImg.errors.required">Image is required</div>
-         </div>
-        <label for="category_id">Category</label>
-        <select name="category_id" formControlName="category_id"  class="text form-control" >
-            <option *ngFor="let category of categories" [ngValue]="category.id">{{category.categoryName}}</option>
-        </select>
+<app-navigation></app-navigation>
+    <div class="wrapper">
+        <div class="title">
+            Update Cake {{product.productName}}
+        </div>
+
+        <div class="form">
+            <form (ngSubmit)="updateProduct()" [formGroup]="form">
+
+                <div class="inputfield">
+                    <label>Name</label>
+                    <input type="text" formControlName="productName" name="productName" class="input">
+                </div>
+                <div class="inputfield">
+                    <label>Description</label>
+                    <input type="text" formControlName="productDetails" name="productDetails" class="input">
+                </div>
+                <div class="inputfield">
+                    <label>Price</label>
+                    <input type="number" formControlName="productPrice" name="productPrice" class="input">
+                </div>
+
+                <div class="inputfield">
+                    <label>Image</label>
+                    <input type="file" formControlName="productImg" name="productImg" class="form-control"
+                        (change)="uploadImage($event)" [ngClass]="{ 'is-invalid': submitted && f.productImg.errors}">
+                    <div *ngIf="submitted && f.productImg.errors" class="invalid-feedback">
+                        <div *ngIf="f.productImg.errors.required">Image is required</div>
+                    </div>
+                </div>
+
+                <div class="inputfield">
+                    <label>Cake Category</label>
+                    <select name="category_id" formControlName="category_id" class="text form-control">
+                        <option *ngFor="let category of categories" [ngValue]="category.id">{{category.categoryName}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="inputfield terms">
+                    <label class="check">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p> I'am sure </p>
+                </div>
+                <div class="inputfield">
+                    <input type="submit" value="Submit" class="btn">
+                </div>
+                <div class="inputfield">
+                    <input [routerLink]="['/products']" value="Back" class="btn">
+                </div>
+            </form>
+        </div>
     </div>
-    <button class="btn btn-dark btn -sm mt-4">Submit</button>
-    <button class="btn" [routerLink]="['/products']">Back</button>
-</form>

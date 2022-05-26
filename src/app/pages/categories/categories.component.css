@@ -28,6 +28,11 @@
     object-fit: cover;
     border-radius: 10px;
 }
+.categorybox img:hover
+{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
 
 .categorybox h1
 {
