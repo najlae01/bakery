@@ -45,7 +45,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](images/chef%20list%20for%20client.jpg)
 
 ### *Menu (All products)*
-![image](images/tous%20les%20produits%20.jpg)
+![image](images/tous%20les%20produits.jpg)
 
 ### *Menu of products per category*
 ![image](images/produit%20par%20categorie%201.jpg)
