@@ -33,7 +33,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/65598953/154868931-e4610312-9b4c-4339-93fb-3878bbd5830e.png)
 
 ### *Seller page + contact seller button*
-![image](https://user-images.githubusercontent.com/65598953/154868986-f8e8a432-762f-4f88-a131-7d53c8bddd82.png)
+![image](images/home%20page.jpg)
 
 ### *Search feature with multiple filter options*
 ![image](https://user-images.githubusercontent.com/65598953/154869022-05b15b4a-aa48-4daa-b658-2187cfab9b74.png)
