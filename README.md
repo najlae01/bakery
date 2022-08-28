@@ -30,35 +30,53 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Overview
 ### *Home page*
-![image](https://user-images.githubusercontent.com/65598953/154868931-e4610312-9b4c-4339-93fb-3878bbd5830e.png)
-
-### *Seller page + contact seller button*
 ![image](images/home%20page.jpg)
+![image](images/our%20specialties.jpg)
+![image](images/our%20customers%20favorites.jpg)
+![image](images/footer.jpg)
 
-### *Search feature with multiple filter options*
-![image](https://user-images.githubusercontent.com/65598953/154869022-05b15b4a-aa48-4daa-b658-2187cfab9b74.png)
+### *Gallery page*
+![image](images/gallery.jpg)
 
-### *Product page + product reviews*
-![image](https://user-images.githubusercontent.com/65598953/154869062-890176ef-44a2-4254-a787-51f47f98a6e1.png)
+### *About page*
+![image](images/about%20us.jpg)
 
-### *Cart page (persistent shopping cart in Local Storage)*
-![image](https://user-images.githubusercontent.com/65598953/154869082-d1c470cb-2724-47a0-8831-870616c4da6a.png)
+### *Chefs page*
+![image](images/chef%20list%20for%20client.jpg)
 
-### *Shipping page + Google Maps feature*
-![image](https://user-images.githubusercontent.com/65598953/154869094-aaf342e5-70a2-4073-bd69-06c446f18750.png)
+### *Menu (All products)*
+![image](images/tous%20les%20produits%20.jpg)
 
-### *Order placement page + support chat*
-![image](https://user-images.githubusercontent.com/65598953/154869114-93f6e201-3ab2-4ea7-8466-bd135e145716.png)
+### *Menu of products per category*
+![image](images/produit%20par%20categorie%201.jpg)
+![image](images/produit%20par%20categorie%203.jpg)
 
-### *Order placed page + payment feature (paypal or stripe)*
-![image](https://user-images.githubusercontent.com/65598953/154869197-8184b701-2fb9-4114-91c0-0a02a452a001.png)
+### *Empty Cart page*
+![image](images/empty%20cart.jpg)
+
+### *Register page*
+![image](images/register%20form.jpg)
+
+### *Login page*
+![image](images/login%20form.jpg)
 
 ## Admin
-### *Dashboard*
-![image](https://user-images.githubusercontent.com/65598953/154869239-291eea9d-424e-4a2d-99d0-f9a60a75871a.png)
+### *All products list page*
+![image](images/products%20lists.jpg)
+I know the dashboard design is a mess :). I still need to fix it.
 
-### *Products/Orders/Users page*
-![image](https://user-images.githubusercontent.com/65598953/154869267-94e438d9-02b3-4c0c-9658-46e25575e4c3.png)
+### *Chefs list page*
+![image](images/chef%20list.jpg)
 
-### *Shipping control*
-![image](https://user-images.githubusercontent.com/65598953/154869271-57688e7d-64cc-4386-8cad-e6bafc0e38f2.png)
+### *Gallery list page*
+![image](images/dashboard%20list.jpg)
+
+### *Adding a new cake page (product)*
+![image](images/adding%20a%20new%20cake%20before.jpg)
+![image](images/adding%20a%20new%20cake%20.jpg)
+
+### *Adding a new category page*
+![image](images/adding%20a%20new%20category%20.jpg)
+
+### *Adding a new chef page*
+![image](images/adding%20a%20new%20chef%20.jpg)
