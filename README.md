@@ -31,7 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Overview
 ### *Home page*
 ![image](images/home%20page.jpg)
-![image](images/our%20specialties.jpg)
+![image](images/our%20specialities.jpg)
 ![image](images/our%20customers%20favorites.jpg)
 ![image](images/footer.jpg)
 
@@ -73,10 +73,10 @@ I know the dashboard design is a mess :). I still need to fix it.
 
 ### *Adding a new cake page (product)*
 ![image](images/adding%20a%20new%20cake%20before.jpg)
-![image](images/adding%20a%20new%20cake%20.jpg)
+![image](images/adding%20a%20new%20cake.jpg)
 
 ### *Adding a new category page*
-![image](images/adding%20a%20new%20category%20.jpg)
+![image](images/adding%20a%20new%20category.jpg)
 
 ### *Adding a new chef page*
-![image](images/adding%20a%20new%20chef%20.jpg)
+![image](images/adding%20a%20new%20chef.jpg)
